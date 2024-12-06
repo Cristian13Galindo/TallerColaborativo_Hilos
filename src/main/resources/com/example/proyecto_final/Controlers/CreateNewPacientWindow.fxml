@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="580.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto_final.Controlers.CreateNewPacientWindowController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="580.0" style="-fx-background-color: rgba(28, 77, 123, 1);">
+            <children>
+                <Label layoutX="14.0" layoutY="18.0" text="SaludDigital" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="383.0" layoutY="24.0" text="Crear Nuevo Paciente" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="167.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/ImagenMuela.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+
+        <Label layoutX="20.0" layoutY="94.0" text="Atras">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="110.0" layoutY="112.0" text="Bienvenido">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="110.0" layoutY="160.0" text="Nombre">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtName" layoutX="110.0" layoutY="180.0" prefHeight="25.0" prefWidth="187.0" />
+
+        <Label layoutX="310.0" layoutY="160.0" text="Apellidos">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtLastName" layoutX="310.0" layoutY="180.0" prefHeight="25.0" prefWidth="187.0" />
+
+        <Label layoutX="110.0" layoutY="220.0" text="Fecha de Nacimiento">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="btndateOfBirth" layoutX="110.0" layoutY="240.0" prefHeight="25.0" prefWidth="187.0" />
+
+        <Label layoutX="310.0" layoutY="220.0" text="N° Identificación">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtDni" layoutX="310.0" layoutY="240.0" prefHeight="25.0" prefWidth="187.0" />
+
+        <Label layoutX="110.0" layoutY="280.0" text="Teléfono">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtPhone" layoutX="110.0" layoutY="300.0" prefHeight="25.0" prefWidth="187.0" />
+
+        <Label layoutX="310.0" layoutY="280.0" text="Email">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtEmail" layoutX="310.0" layoutY="300.0" prefHeight="25.0" prefWidth="187.0" />
+
+        <Label layoutX="110.0" layoutY="340.0">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="249.0" layoutY="340.0" text="Procedimiento">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="comboPriority" layoutX="204.0" layoutY="358.0" prefHeight="25.0" prefWidth="187.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="1" />
+                    <String fx:value="2" />
+                    <String fx:value="3" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Button fx:id="btnCreatePacient" layoutX="219.0" layoutY="400.0" mnemonicParsing="false" onAction="#clicCreatePacient" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: rgba(28, 77, 123, 1);" text="CREAR PACIENTE" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="12.0" />
+            </font>
+        </Button>
+
+        <Label layoutX="108.0" layoutY="134.0" text="Ingrese los datos del paciente en cada uno de los siguientes campos:">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="btnBack" contentDisplay="GRAPHIC_ONLY" layoutX="13.0" layoutY="120.0" mnemonicParsing="false" onAction="#clicBack" text="Button">
+            <graphic>
+                <ImageView fitHeight="43.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/ImagenAtras.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+</Pane>
